@@ -1,0 +1,41 @@
+import sys
+
+
+def factorize(n):
+    factors = []
+    i = 2
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+            factors.append(i)
+    if n > 1:
+        factors.append(n)
+    return factors
+
+
+def main():
+    if len(sys.argv) != 2:
+        print("Usage: factors <file>")
+        sys.exit(1)
+
+    input_file = sys.argv[1]
+
+    try:
+        with open(input_file, 'r') as file:
+            for line in file:
+                number = int(line.strip())
+                factors = factorize(number)
+                print(f"{number}={'*'.join(map(str, factors))}")
+    except FileNotFoundError:
+        print(f"Error: File '{input_file}' not found.")
+        sys.exit(1)
+    except ValueError:
+        print("Error: Invalid number in the file.")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
+
