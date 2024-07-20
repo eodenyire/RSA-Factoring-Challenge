@@ -50,3 +50,6 @@ For collaborations or inquiries, please contact Emmanuel Odenyire Anyira via:
 
 This project is part of the ALX Software Engineering Program. The official repository can be found at [ALX Africa GitLab](https://gitlab.alx.software/emmanuel/Higher-Level-Programming/tree/main/0x00-algorithms\_holberton\_rsa\_factoring\_challenge).
 
+## General
+* You can choose the language of your choice.
+* OS needs to be Standard Ubuntu 20.04 LTS/
